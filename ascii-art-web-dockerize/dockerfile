@@ -1,0 +1,12 @@
+FROM golang
+
+WORKDIR /ascii-art-web-dockerize
+
+COPY . .
+
+RUN  go build -o main.go 
+
+
+EXPOSE 8888
+
+CMD ["./main.go"]
